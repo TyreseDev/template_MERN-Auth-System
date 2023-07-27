@@ -1,4 +1,4 @@
-import { alpha } from '@mui/material/styles';
+import { alpha } from "@mui/material/styles";
 
 // ----------------------------------------------------------------------
 
@@ -7,12 +7,12 @@ export default function Input(theme) {
     MuiInputBase: {
       styleOverrides: {
         root: {
-          '&.Mui-disabled': {
-            '& svg': { color: theme.palette.text.disabled },
+          "&.Mui-disabled": {
+            "& svg": { color: theme.palette.text.disabled },
           },
         },
         input: {
-          '&::placeholder': {
+          "&::placeholder": {
             opacity: 1,
             color: theme.palette.text.disabled,
           },
@@ -22,7 +22,7 @@ export default function Input(theme) {
     MuiInput: {
       styleOverrides: {
         underline: {
-          '&:before': {
+          "&:before": {
             borderBottomColor: alpha(theme.palette.grey[500], 0.56),
           },
         },
@@ -32,18 +32,18 @@ export default function Input(theme) {
       styleOverrides: {
         root: {
           backgroundColor: alpha(theme.palette.grey[500], 0.12),
-          '&:hover': {
+          "&:hover": {
             backgroundColor: alpha(theme.palette.grey[500], 0.16),
           },
-          '&.Mui-focused': {
+          "&.Mui-focused": {
             backgroundColor: theme.palette.action.focus,
           },
-          '&.Mui-disabled': {
+          "&.Mui-disabled": {
             backgroundColor: theme.palette.action.disabledBackground,
           },
         },
         underline: {
-          '&:before': {
+          "&:before": {
             borderBottomColor: alpha(theme.palette.grey[500], 0.56),
           },
         },
@@ -52,11 +52,11 @@ export default function Input(theme) {
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          '& .MuiOutlinedInput-notchedOutline': {
+          "& .MuiOutlinedInput-notchedOutline": {
             borderColor: alpha(theme.palette.grey[500], 0.32),
           },
-          '&.Mui-disabled': {
-            '& .MuiOutlinedInput-notchedOutline': {
+          "&.Mui-disabled": {
+            "& .MuiOutlinedInput-notchedOutline": {
               borderColor: theme.palette.action.disabledBackground,
             },
           },

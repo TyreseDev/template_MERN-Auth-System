@@ -25,16 +25,12 @@ export default function Router() {
     },
     {
       path: "login",
-      element: isAuthenticated ? (
-        <Navigate to="/dashboard/app" />
-      ) : (
-        <LoginPage />
-      ),
+      element: isAuthenticated ? <Navigate to="/dashboard" /> : <LoginPage />,
     },
     {
       path: "register",
       element: isAuthenticated ? (
-        <Navigate to="/dashboard/app" />
+        <Navigate to="/dashboard" />
       ) : (
         <RegisterPage />
       ),
@@ -45,6 +41,10 @@ export default function Router() {
         { path: "404", element: <Page404 /> },
         { path: "*", element: <Navigate to="/404" /> },
       ],
+    },
+    {
+      path: "*",
+      element: <Navigate to="/404" replace />,
     },
   ]);
 
