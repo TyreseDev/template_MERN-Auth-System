@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import User from "../models/user.mjs";
 import registerValidation from "../utils/validation/register.mjs";
 import loginValidation from "../utils/validation/login.mjs";
-import { JWT_SECRET_KEY } from "../config/index.mjs";
+import { JWT_SECRET_KEY, JWT_EXPIRES_IN } from "../config/index.mjs";
 
 // Register user
 export const registerUser = async (req, res) => {
