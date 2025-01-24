@@ -17,6 +17,7 @@ const Iconify = forwardRef(({ icon, width = 20, sx, ...other }, ref) => (
   />
 ));
 
+Iconify.displayName = "Iconify";
 Iconify.propTypes = {
   sx: PropTypes.object,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),

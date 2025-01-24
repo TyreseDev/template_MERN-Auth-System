@@ -75,7 +75,7 @@ export default function LoginPage() {
               Sign in to Minimal
             </Typography>
             <Typography variant="body2">
-              Don't have an account? {""}
+              Don&apos;t have an account? {""}
               <Link href="./register" variant="subtitle2">
                 Get started
               </Link>
