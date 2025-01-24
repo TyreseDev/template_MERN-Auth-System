@@ -1,5 +1,5 @@
 // eslint-disable-next-line camelcase
-import jwt_decode from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 import { GET_ERRORS, SET_CURRENT_USER } from "./types";
 import setAuthToken from "../../utils/setAuthToken";
@@ -29,7 +29,7 @@ export const loginUser = (userData) => async (dispatch) => {
     // Set token to Authentication header
     setAuthToken(token);
     // Get the user by the token
-    const userDecoded = jwt_decode(token);
+    const userDecoded = jwtDecode(token);
     // Set current user
     dispatch(setCurrentUser(userDecoded));
     return Promise.resolve();

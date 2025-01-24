@@ -30,7 +30,7 @@ import Scrollbar from "../../../components/scrollbar";
 
 const NOTIFICATIONS = [
   {
-    id: faker.datatype.uuid(),
+    id: faker.string.uuid(),
     title: "Your order is placed",
     description: "waiting for shipping",
     avatar: null,
@@ -39,8 +39,8 @@ const NOTIFICATIONS = [
     isUnRead: true,
   },
   {
-    id: faker.datatype.uuid(),
-    title: faker.name.fullName(),
+    id: faker.string.uuid(),
+    title: faker.person.fullName(),
     description: "answered to your comment on the Minimal",
     avatar: "/assets/images/avatars/avatar_2.jpg",
     type: "friend_interactive",
@@ -48,7 +48,7 @@ const NOTIFICATIONS = [
     isUnRead: true,
   },
   {
-    id: faker.datatype.uuid(),
+    id: faker.string.uuid(),
     title: "You have new message",
     description: "5 unread messages",
     avatar: null,
@@ -57,7 +57,7 @@ const NOTIFICATIONS = [
     isUnRead: false,
   },
   {
-    id: faker.datatype.uuid(),
+    id: faker.string.uuid(),
     title: "You have new mail",
     description: "sent from Guido Padberg",
     avatar: null,
@@ -66,7 +66,7 @@ const NOTIFICATIONS = [
     isUnRead: false,
   },
   {
-    id: faker.datatype.uuid(),
+    id: faker.string.uuid(),
     title: "Delivery processing",
     description: "Your order is being shipped",
     avatar: null,

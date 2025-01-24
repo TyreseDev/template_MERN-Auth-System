@@ -1,10 +1,8 @@
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-// eslint-disable-next-line camelcase
-import jwt_decode from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import Router from "./routes";
 import ThemeProvider from "./theme";
-import { StyledChart } from "./components/chart";
 import setAuthToken from "./utils/setAuthToken";
 import ScrollToTop from "./components/scroll-to-top";
 import { setCurrentUser, logoutUser } from "./redux/actions/authActions";
@@ -12,7 +10,7 @@ import store from "./redux/store";
 
 if (localStorage.getItem("jwtToken")) {
   setAuthToken(localStorage.getItem("jwtToken"));
-  const userDecoded = jwt_decode(localStorage.getItem("jwtToken"));
+  const userDecoded = jwtDecode(localStorage.getItem("jwtToken"));
   store.dispatch(setCurrentUser(userDecoded));
   // Check for expired time
   const currentTime = Date.now() / 1000;
@@ -31,7 +29,6 @@ export default function App() {
       <BrowserRouter>
         <ThemeProvider>
           <ScrollToTop />
-          <StyledChart />
           <Router />
         </ThemeProvider>
       </BrowserRouter>
